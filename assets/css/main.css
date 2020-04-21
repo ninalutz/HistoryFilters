@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -111,7 +112,7 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e44c65;
+		color: #ffaaa5;
 		text-decoration: none;
 	}
 
@@ -288,7 +289,7 @@ input, select, textarea {
 		}
 
 		99% {
-			color: #1c1d26;
+			color: #a8e6cf;
 			z-index: 100001;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -297,7 +298,7 @@ input, select, textarea {
 		}
 
 		100% {
-			color: #1c1d26;
+			color: #a8e6cf;
 			z-index: -1;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -317,7 +318,7 @@ input, select, textarea {
 		}
 
 		99% {
-			color: #1c1d26;
+			color: #a8e6cf;
 			z-index: 100001;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -326,7 +327,7 @@ input, select, textarea {
 		}
 
 		100% {
-			color: #1c1d26;
+			color: #a8e6cf;
 			z-index: -1;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -2270,7 +2271,7 @@ input, select, textarea {
 
 		select option {
 			color: #ffffff;
-			background: #1c1d26;
+			background: #a8e6cf;
 		}
 
 		select:focus::-ms-value {
@@ -3125,7 +3126,7 @@ input, select, textarea {
 			height: 101%;
 			padding: 6em 3em;
 			top: 0;
-			width: 28em;
+			width: 45em;
 		}
 
 		.spotlight.left .content {
@@ -3374,7 +3375,7 @@ input, select, textarea {
 	}
 
 	#header {
-		background: rgba(39, 40, 51, 0.965);
+		background: #a8e6cf;
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 		cursor: default;
 		height: 3.5em;
@@ -3532,7 +3533,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #272833;
+		background: #ffaaa5;
 		padding: 6em 0;
 		text-align: center;
 	}
