@@ -3122,11 +3122,12 @@ input, select, textarea {
 			bottom: 0;
 		}
 
+
 		.spotlight.left .content, .spotlight.right .content {
-			height: 101%;
-			padding: 6em 3em;
+			height: 200%;
+			padding: 2em 2em;
 			top: 0;
-			width: 45em;
+			width: 51em;
 		}
 
 		.spotlight.left .content {
