@@ -751,6 +751,7 @@ input, select, textarea {
 
 		.row > .col-4 {
 			width: 33.33333%;
+			text-align: center;
 		}
 
 		.row > .off-4 {
@@ -3531,6 +3532,20 @@ input, select, textarea {
 		background-attachment: scroll;
 	}
 
+/* Banner 2 */
+	.banner2 {
+		background-attachment: fixed;
+		background-color: #272833;
+		background-image: url("../../images/voguebanner.png.png");
+		background-position: center center;
+		background-size: cover;
+		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+		min-height: 100vh;
+		position: relative;
+		text-align: center;
+		z-index: 21;
+	}
+
 /* Footer */
 
 	#footer {
@@ -3613,6 +3628,7 @@ input, select, textarea {
 		/* Spotlight */
 
 			.spotlight.top .content {
+				
 				padding: 3.825em 0 1.825em 0;
 			}
 
@@ -3857,6 +3873,7 @@ input, select, textarea {
 						height: 9em;
 						width: 9em;
 					}
+				
 
 		/* Nav */
 
