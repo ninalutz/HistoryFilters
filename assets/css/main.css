@@ -3072,7 +3072,7 @@ input, select, textarea {
 			display: none;
 		}
 
-			.spotlight .image.main img {
+		.spotlight .image.main img {
 				position: relative;
 			}
 
@@ -3105,6 +3105,16 @@ input, select, textarea {
 			-ms-transition-delay: 0.5s;
 			transition-delay: 0.5s;
 			opacity: 1;
+		}
+
+		.spotlight.top:before {
+			background-image: url("../../images/voguebanner.png");
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			top: 0;
+			width: 100%;
 		}
 
 		.spotlight.top .content, .spotlight.bottom .content {
@@ -3532,19 +3542,6 @@ input, select, textarea {
 		background-attachment: scroll;
 	}
 
-/* Banner 2 */
-	.banner2 {
-		background-attachment: fixed;
-		background-color: #272833;
-		background-image: url("../../images/voguebanner.png.png");
-		background-position: center center;
-		background-size: cover;
-		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
-		min-height: 100vh;
-		position: relative;
-		text-align: center;
-		z-index: 21;
-	}
 
 /* Footer */
 
