@@ -43,15 +43,20 @@ void draw() {
 
   translate(-a.width, a.height);
 
-  // Update the amount according to mouse position when pressed
+  //// Update the amount according to mouse position when pressed
   if (mousePressed && mouseY > a.height) {
     x = constrain(mouseX, 100, width-100);
-    amt = map(x, 100, width-100, 0, 1);
+  //  amt = map(x, 100, width-100, 0, 1);
   }
+  
+  
+  if(amt < 1){
+    amt+=0.005;
+  }
+    else amt = 0;
 
   // Morph an amount between 0 and 1 (0 being all of A, 1 being all of B)
   morph.drawMorph(amt);
-
 
   popMatrix();
 
@@ -88,9 +93,13 @@ void keyPressed() {
   if (key == 's') {
     morph.savePoints();
   } 
-  else if (key == 'l') {
+   if (key == 'l') {
     morph.loadPoints();
   }
+  //if(key == 'r'){
+  //  if(amt < 1) amt+=0.1;
+  //  else amt = 0;
+  //}
 }
 
 // Variables to keep track of mouse interaction
