@@ -13,16 +13,29 @@ Morpher morph;
 float amt =  0;
 // Morph bar position
 float x = 100; 
-
+int pair = 0;
+ArrayList<Morpher> morphs;
 void setup() {
   size(1200, 900, P2D);
+  morphs = new ArrayList<Morpher>();
+  
+  for(int i = 0; i<66;i++){
+    a = loadImage("2010sALL/image" + str(i) + ".jpg");
+    b= loadImage("2010sALL/image" + str(i+1) + ".jpg");
+    morph = new Morpher(a, b);
+    morph.loadPoints();
+    morphs.add(morph);
+  }
+  
 
-  // Load the images
-  a = loadImage("pic1.jpg");
-  b = loadImage("pic2.jpg");
+  //// Load the images
+  //a = loadImage("2010sALL/image1.jpg");
+  //b = loadImage("2010sALL/image2.jpg");
 
   // Create the morphing object
-  morph = new Morpher(a, b);
+  //morph = new Morpher(a, b);
+  
+  //morph.loadPoints();
 }
 
 void draw() {
@@ -32,31 +45,39 @@ void draw() {
 
   pushMatrix();
 
-  // Show Image A and its triangles
-  morph.displayImageA();
-  morph.displayTrianglesA();
+  // //Show Image A and its triangles
+  //morph.displayImageA();
+  //morph.displayTrianglesA();
 
-  // Show Image B and its triangles
-  translate(a.width, 0);
-  morph.displayImageB();
+  //// Show Image B and its triangles
+  //translate(a.width, 0);
+  //morph.displayImageB();
 
 
-  translate(-a.width, a.height);
+  //translate(-a.width, a.height);
 
-  //// Update the amount according to mouse position when pressed
-  if (mousePressed && mouseY > a.height) {
-    x = constrain(mouseX, 100, width-100);
-  //  amt = map(x, 100, width-100, 0, 1);
-  }
+  ////// Update the amount according to mouse position when pressed
+  //if (mousePressed && mouseY > a.height) {
+  //  x = constrain(mouseX, 100, width-100);
+  ////  amt = map(x, 100, width-100, 0, 1);
+  //}
   
   
   if(amt < 1){
-    amt+=0.005;
+    amt+=0.004;
   }
-    else amt = 0;
+  
+
+  else{
+    amt = 0;
+    if(pair < morphs.size() - 1)  pair+=1;
+    else pair = 0;
+  }
+    
+   
 
   // Morph an amount between 0 and 1 (0 being all of A, 1 being all of B)
-  morph.drawMorph(amt);
+  morphs.get(pair).drawMorph(amt);
 
   popMatrix();
 
@@ -71,21 +92,6 @@ void draw() {
   }
 
 
-
-  // Draw bar at bottom
-  stroke(255);
-  line(100, height-50, width-100, height-50);
-  stroke(255);
-  line(x, height-75, x, height-25);
-
-
-  // Some text instructions
-  fill(255);
-  textSize(20);
-  String s = "Click on left image to set a point then click on right image to set corresponding point.";
-  s += " For example, click on right eye in left image then right eye in right image.  Set as many corresponding points as possible.";
-  s += "\n\n 's' to save points, 'l' to load points";
-  text(s, a.width+10, a.height+20, a.width-20, a.height-10);
 }
 
 // Save or load points based on key presses
@@ -93,13 +99,7 @@ void keyPressed() {
   if (key == 's') {
     morph.savePoints();
   } 
-   if (key == 'l') {
-    morph.loadPoints();
-  }
-  //if(key == 'r'){
-  //  if(amt < 1) amt+=0.1;
-  //  else amt = 0;
-  //}
+
 }
 
 // Variables to keep track of mouse interaction

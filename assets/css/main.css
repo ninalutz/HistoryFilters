@@ -650,7 +650,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
-		width: 70em;
+		width: 85%;
 	}
 
 		.container.xsmall {
@@ -2947,9 +2947,8 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
-/* Tiger look here */
-/* Goto Next */
 
+/* Goto Next */
 	.goto-next {
 		border: 0;
 		bottom: 0;
@@ -3226,11 +3225,13 @@ input, select, textarea {
 
 	.wrapper {
 		padding: 6em 0 4em 0;
+		z-index: 21;
 	}
 
 		.wrapper.style2 {
 			background:#ff9fb6;
 		}
+
 
 			.wrapper.style2 input[type="text"]:focus,
 			.wrapper.style2 input[type="password"]:focus,
@@ -3335,6 +3336,30 @@ input, select, textarea {
 		}
 
 		.wrapper.fade.inactive > .container {
+			opacity: 0;
+		}
+
+		.wrapper .goto-next {
+			-moz-transform: translate(0,0);
+			-webkit-transform: translate(0,0);
+			-ms-transform: translate(0,0);
+			transform: translate(0,0);
+			-moz-transition: -moz-transform 0.75s ease, opacity 1s ease-in;
+			-webkit-transition: -webkit-transform 0.75s ease, opacity 1s ease-in;
+			-ms-transition: -ms-transform 0.75s ease, opacity 1s ease-in;
+			transition: transform 0.75s ease, opacity 1s ease-in;
+			-moz-transition-delay: 0.5s;
+			-webkit-transition-delay: 0.5s;
+			-ms-transition-delay: 0.5s;
+			transition-delay: 0.5s;
+			opacity: 1;
+		}
+
+		.wrapper.inactive .goto-next {
+			-moz-transform: translate(0,1.5em);
+			-webkit-transform: translate(0,1.5em);
+			-ms-transform: translate(0,1.5em);
+			transform: translate(0,1.5em);
 			opacity: 0;
 		}
 

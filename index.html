@@ -13,6 +13,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+		</script>
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -59,7 +86,7 @@
 					<div class="content">
 						<div class="container">
 							<div class="row">
-								<div class="col-12 col-12-medium">	
+								<div class="col-10 col-12-medium">	
 									<h2>How it works</h2>
 									<h4>1. We have gathered historical research and summarized it into 6 categories: </h4>
 										<div class="row gtr-uniform">
@@ -99,20 +126,23 @@
 									<h4>3. We have used this information to inform an analysis and interviews regarding Generation Z and their usage of photo taking and editting.</h4>
 									<h4>4. We have presented this analysis and speculations from it along with visual feedback in this website.</h4>
 								</div>
-							</disv>
+							</div>
 						</div>
 					</div>
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
 
 			<!-- Two -->
-				<section id="two" class="spotlight style3 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+				<section id="two" class="spotlight style1 bottom">
+					<!-- <span class="image fit main"><img src="images/pic03.jpg" alt="" /></span> -->
 					<div class="content">
-						<h2>1940s - Wartime Fashion</h2>
-						<h4>
-							World War II placed pressure on women to start emerging into the work place.
-						</h4> <br>
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-12-medium">	
+							<h2>1940s - Wartime Fashion</h2>
+							<h4>
+								World War II placed pressure on women to start emerging into the work place.
+							</h4> <br>
 						
 						<div class="row gtr-uniform">
 						<section class="col-4 col-6-medium col-12-xsmall">
@@ -154,7 +184,9 @@
 							<p>Increased pressure on women of color to straighten and contain natural hair texture.</p>
 						</section>		
 						</div>	
-						<p></p>		
+						</div>
+					</div>
+				</div>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
@@ -466,7 +498,6 @@
 
 			<!-- Nine -->
 				<section id="eight" class="spotlight style3 right">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 						<h2>2000s - Sporting Accessories</h2>
@@ -537,15 +568,23 @@
 				</section>
 
 			<!-- Nine -->
-				<section id="nine" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
+				<section id="nine" class="wrapper style1 special fade">
+				<div class="container">
 						<header>
 						<h2>2010s - Curves and Photoshop</h2>
-						<h4>
-							Kardashian butts and social media influencers
-						</h4>	<br>
+							<br>
 						</header>
+					<div class="content">
+						<div class="row gtr-uniform">
+						<section class="col-4">
+							<h4>
+							Kardashian butts and social media influencers
+						</h4>
+						<video width="600" height="400" autoplay>
+							<source src="2010s.mp4" type="video/mp4">
+							</video>
+						</section>
+						<section class="col-8">
 						<div class="row gtr-uniform">
 						<section class="col-4 col-6-medium col-12-xsmall">
 							<img src="images/media.svg" height="80" width="80">
@@ -607,10 +646,12 @@
 							</p>
 						</section>
 						</div>
-						<p></p>
-								
+						</section>
+	
+						</div>
 					</div>
-					<a href="#ten" class="goto-next scrolly">Next</a>
+				</div>
+					<a href="#ten"><img src="images/arrow.svg"></a> 
 				</section>
 
 			<!-- Ten -->
@@ -620,6 +661,7 @@
 						<h2>Vogue and Bodies</h2>
 							<p style="color:black">There were a lot of trends throughout our historical analysis. One of which we considered was Vogue, one of the leading fashion magazines, and data around the average BMI of celebrities and average women.</p>
 						</header>
+
 						<div class="row gtr-uniform">
 								<section class="col-6 col-6-medium col-12-xsmall">
 									<img src="images/bmi.svg" height="100">
@@ -679,9 +721,12 @@
 						<img src="imgAvg/vogue/2000s/image3.jpg" width="12%" height = "12%">
 						<img src="imgAvg/vogue/2010s/image5.jpg" width="12%" height = "12%">
 						<p></p>
+						<!-- <a href="#eleven" class="goto-next scrolly">Next</a> -->
 						<p style="color:black">DISCLAIMER: Vogue covers from Vogue archives. This is computationally generated and subject to error.</p>
+
+				
 					</div>
-					<a href="#eleven" class="goto-next scrolly">Next</a>
+					<a href="#eleven"><img src="images/arrow.svg"></a> 
 				</section>
 
 			<!-- Twelve -->
@@ -758,18 +803,18 @@
 							<p>DISCLAIMER: All of these results are by computational methods and are subject to error. This is not verified.</p>
 							
 					</div>
-				<a href="#twelve" class="goto-next scrolly">Next</a>
+					<a href="#twelve"><img src="images/arrow.svg"></a> 
 
 				</section>
 
 			<!--Thirteen -->
+
 				<section id="twelve" class="wrapper style2 special fade-up">
 					<div class="container">
 						<header >
 							<h2>So What Are We To Do?</h2>
-							<p>Aesthetic standards change over time and this is natural as culture evolves and creates new art and movements. This is natural. However, humans have been using advanced photography to edit their bodies as well as intesive methods to train bodies to match changing standards for a long time. This portion is not natural.</p>
-							<p>And as social media, as seen above, has made this filtering and editting part of the experience. You cannot go to Instagram without interacting with filters. But what if you could understand that your feed was full of filters?</p>
-							<h4>INSERT ANIMATION HERE</h4>
+							<p style="color:black">Aesthetic standards change over time and this is natural as culture evolves and creates new art and movements. This is natural. However, humans have been using advanced photography to edit their bodies as well as intesive methods to train bodies to match changing standards for a long time.</p>
+							<p style="color:black">And as social media, as seen above, has made this filtering and editting part of the experience. You cannot go to Instagram without interacting with filters. But what if you could understand that your feed was full of filters?</p>
 						</header>
 					
 						<div class="box alt">

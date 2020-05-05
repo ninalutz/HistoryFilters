@@ -8,8 +8,6 @@
 import triangulate.*;
 
 class Morpher {
-
-
   // A list of edges (each one is a pair of PVectors, one on each image)
   ArrayList<Pair> pairs = new ArrayList<Pair>();
   // A list of triangles (each one is a pair of Triangles, one on each image)
