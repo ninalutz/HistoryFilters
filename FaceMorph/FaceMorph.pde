@@ -19,9 +19,9 @@ void setup() {
   size(1200, 900, P2D);
   morphs = new ArrayList<Morpher>();
   
-  for(int i = 0; i<66;i++){
-    a = loadImage("2010sALL/image" + str(i) + ".jpg");
-    b= loadImage("2010sALL/image" + str(i+1) + ".jpg");
+  for(int i = 0; i<71;i++){
+    a = loadImage("1940sALL/pic" + str(i) + ".jpg");
+    b= loadImage("1940sALL/pic" + str(i+1) + ".jpg");
     morph = new Morpher(a, b);
     morph.loadPoints();
     morphs.add(morph);
@@ -64,7 +64,7 @@ void draw() {
   
   
   if(amt < 1){
-    amt+=0.004;
+    amt+=0.005;
   }
   
 
