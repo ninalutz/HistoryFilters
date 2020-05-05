@@ -20,8 +20,12 @@ void setup() {
   morphs = new ArrayList<Morpher>();
   
   for(int i = 0; i<71;i++){
-    a = loadImage("1940sALL/pic" + str(i) + ".jpg");
-    b= loadImage("1940sALL/pic" + str(i+1) + ".jpg");
+    a = loadImage("2000sALL/pic" + str(i) + ".jpg");
+    b= loadImage("2000sALL/pic" + str(i+1) + ".jpg");
+    if(a.width > 500) a.resize(500, 0);
+    if(a.height > 500) a.resize(0, 500);
+    if(b.width > 500) b.resize(500, 0);
+    if(b.height>500) b.resize(0, 500);
     morph = new Morpher(a, b);
     morph.loadPoints();
     morphs.add(morph);
